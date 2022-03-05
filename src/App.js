@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
 
-      <div class="container">
+      <div className="container">
         <Searchbar />
         <div className="main row">
           {movies.length > 0 &&

@@ -3,7 +3,9 @@ import React from 'react'
 function Searchbar() {
   return (
     <div className='search-container'>
-        <input type="search" />
+        <form spellCheck="false">
+        <input  autoComplete="off" type="search" />
+        </form>
     </div>
   )
 }
