@@ -5,15 +5,31 @@
   margin: 0;
   box-sizing: border-box;
   --dark-bg: #282c34;
-  --light-bg: #ffffff;
+  --light-bg: #d3d3d3;
   --dark-font: var(--dark-bg);
+}
+*::-webkit-scrollbar {
+  /* width: 4px; */
+  background: #9e9e9eec;
+}
+
+*::-webkit-scrollbar {
+  height: 20px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(224, 224, 224);
+  width: 20px;
+  border-radius: 6px;
+}
+*::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 10px;
 }
 
 .main {
+  /* border: 3px solid blue; */
   /* color: blue; */
-  /* min-height: 100vh; */
 
-  /* background-color: red; */
 }
 
 .App {
@@ -31,34 +47,62 @@
   }
 }
 .movie {
-  width: 300px;
 
+  /* width: 300px; */
+  /* max-width:20%; */
+  width:20%;
+  /* height: 50%; */
+  /* float:left; */
+  left:1.2rem;
+  position: relative;
+  /* position: relative; */
+  /* display: inline-block; */
+
+
+}
+@media screen and (max-width: 900px){
+  .movie{
+    
+    font-size: 12px;
+  width:30%;
+  margin: 0 auto;
+  text-align: center;
+  
+
+  }
 }
 
 .movie img {
+  image-rendering: optimizeSpeed;
+  image-resolution: 200px;
   max-width: 100%;
   object-fit: cover;
 }
 .row {
   display: flex;
+  
   flex-wrap: wrap;
-  flex-basis: 100%;
-  flex: 1;
+  /* flex-basis: 100%; */
+  /* flex: 1; */
   justify-content: center;
   gap: 0.7rem;
 }
 .App {
   /* background-color: var(--dark-bg); */
-  background-color: var(--light-bg);
-  min-height: 100vh;
-
+  /* height: 100%; */
+  /* padding-bottom: 1.1rem; */
+  /* min-height: 350vh; */
   color: var(--dark-font);
 }
 .movie-container{
+  background-color: var(--light-bg);
+
   position: relative;
   margin:.5rem;
 }
 .container {
+  background-color: var(--light-bg);
+
   padding: 2rem;
 }
 .movie-info {
@@ -85,7 +129,7 @@ h3.title:hover {
   width: 30%;
   min-width: 75%;
   background: transparent;
-  color: #61dafb;
+  color: #0b5f77;
   padding: 0.25rem 0.75rem;
   margin: 0 0 2rem 0;
 }
@@ -95,6 +139,9 @@ h3.title:hover {
   outline: None;
 }
 .vote-span {
+  font-family: sans-serif;
+
+  font-size:15px;
   margin: 0;
   padding: 0;
   padding-top: 7px;
@@ -103,8 +150,8 @@ h3.title:hover {
   border-radius: 0 0 0 12%;
   right: 0;
   padding: 0.5rem;
-  width: 46px;
-  height: 46px;
+  width: 37px;
+  max-height: 36px;
   position: absolute;
   /* box-shadow: 0 0 70px 0px rgb(0 0 0 / 29%); */
   box-shadow: 0 0 20px 0px rgb(143 143 143 / 38%);
@@ -112,6 +159,26 @@ h3.title:hover {
   background-color: rgba(255, 255, 255, 0.411);
   /* top:0; */
   /* right:10px; */
+  text-shadow: 0px 0px 1px  rgb(100, 100, 100);
+}
+.vote-span.green{
+  
+
+  border-bottom:4px solid rgb(3, 121, 3);
+  
+}
+.vote-span.orange{
+  
+  border-bottom:4px solid rgba(202, 133, 3, 0.746);
+  
+}
+.vote-span.red{
+  
+  border-bottom:4px solid rgba(189, 2, 2, 0.712);
+  
+}
+.vote-span.disable{
+  display: none;
 }
 
 .App-link {
