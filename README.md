@@ -1,6 +1,3 @@
-This project was deployed with netlify 
-https://moviezee.netlify.app
-
 Features <br>
   1.Search movies <br>
   2.Rating review with colors <br>
